@@ -1,0 +1,92 @@
+Git Commands Used - Git & GitHub Workflow
+Repository: https://github.com/dhruvb2028/git-workflow-login-tests-2026
+
+1. git init -b main
+   Initialized the local project as a Git repository with main as the first branch.
+
+2. git config user.name "Dhruv Bansal"
+   Set the author name for commits in this local repository.
+
+3. git config user.email "dhruvb2028@gmail.com"
+   Set the author email for commits in this local repository.
+
+4. git add index.html about.html
+   Staged both initial HTML pages for the first commit.
+
+5. git commit -m "Initial project pages"
+   Recorded the initial state of the two-page project.
+
+6. git add index.html
+   Staged the updated home page.
+
+7. git commit -m "Expand home page introduction"
+   Recorded a second version of the home page.
+
+8. git branch feature
+   Created the feature branch from the current main commit.
+
+9. git switch feature
+   Moved the working copy to the feature branch.
+
+10. git add about.html
+    Staged the about-page change made on feature.
+
+11. git commit -m "Add feature branch description"
+    Recorded the new description on the feature branch.
+
+12. git switch main
+    Returned to the main branch before merging.
+
+13. git merge --no-ff feature -m "Merge feature into main"
+    Merged feature into main with a visible merge commit.
+
+14. git log --graph --oneline --all --decorate
+    Displayed the commit graph, including the feature branch and merge.
+
+15. git add .gitignore
+    Staged ignore rules for *.log files and the temp/ folder.
+
+16. git commit -m "Ignore log files and temp folder"
+    Recorded the .gitignore configuration in the history.
+
+17. git status --short --ignored
+    Confirmed debug.log and temp/ were ignored and not staged.
+
+18. git add index.html
+    Staged a temporary change used to demonstrate undo.
+
+19. git commit -m "Add temporary home page line"
+    Recorded the temporary change as an additional commit.
+
+20. git revert --no-edit HEAD
+    Undid the last commit with a new revert commit, preserving the audit trail.
+
+21. git show --stat --oneline HEAD
+    Showed that the revert removed one line from index.html.
+
+22. git status --short --ignored
+    Confirmed the working tree had no tracked changes after the revert.
+
+23. git log --graph --oneline --all --decorate
+    Displayed the full history with the temporary and revert commits.
+
+24. git add git_commands.txt
+    Staged this command documentation file.
+
+25. git commit -m "Document Git workflow commands"
+    Added the command reference to the repository history.
+
+26. git remote add origin https://github.com/dhruvb2028/git-workflow-login-tests-2026.git
+    Connected the local repository to the new public GitHub repository.
+
+27. git push -u origin main
+    Published the complete main-branch history and set its upstream.
+
+28. git push -u origin feature
+    Published the feature branch so its separate activity is visible on GitHub.
+
+29. git remote -v
+    Verified that origin points to the intended GitHub repository.
+
+30. git status --short --branch
+    Verified the final local branch was clean and tracking origin/main.
